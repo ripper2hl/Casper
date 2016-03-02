@@ -4,23 +4,29 @@
 </div>
 
 {{! This is the post loop - each post will be output using this markup }}
-{{#foreach posts}}
-<article class="media {{post_class}}">
-  <div class="media-body well">
-    <header class="media-heading">
-        <h2 class="post-title"><a href="{{url}}" >{{{title}}}</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
-    </section>
-    <footer class="post-meta text-muted">
-        {{author}}
-        {{tags prefix=" on "}}
-        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
-    </footer>
-  </div>
-</article>
-{{/foreach}}
+<div class="flex-row row">
+  {{#foreach posts}}
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 post-preview">
+      <a class="post-preview-link" href="{{url}}">
+      <article class="{{post_class}}">
+        <div class="post-preview-img" style="background-image:url({{image}})" >
+        </div>
+        <div class="post-preview-text">
+          <div class="post-meta text-muted">
+              <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+          </div>          
+          <header class="media-heading">
+              <h4 class="post-title">{{{title}}}</h4>
+          </header>
+          <section class="post-excerpt">
+              <p>{{excerpt words="50"}}</p>
+          </section>
+        </div>
+      </article>
+      </a>
+    </div>
+  {{/foreach}}
+</div>
 
 {{! Previous/next page links - displayed on every page }}
 {{pagination}}
