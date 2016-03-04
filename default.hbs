@@ -33,10 +33,25 @@
         {{! Everything else gets inserted here }}
         {{{body}}}
 
-        <footer class="site-footer clearfix">
-            <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
-            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+        <footer class="footer clearfix">
+          <div class="container text-center">
+            <div class="row">
+              <div class="col-xs-12 col-md-6">
+                <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+              </div>
+
+              <div class="col-xs-12 col-md-6">
+                <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+              </div>
+            </div>
+          </div>
+          <hr/>
+
+          <p class="text-center footer-icon">
+            <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>
+          </p>
         </footer>
+
 
     </div>
 
