@@ -6,10 +6,13 @@
 <header class="main-header post-head {{#if image}}" style="background-image:  linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url({{image}}){{else}}no-cover{{/if}}">
     <div class="container">
       <div class="main-header-text text-center">
-        <h1 class="post-title courgette">{{title}}</h1>
+        <h1 class="post-title">{{title}}</h1>
 
         <section class="post-meta">
-            <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
+            <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">
+              {{date format="DD MMMM YYYY"}}
+            </time>
+            {{tags prefix=" on "}}
         </section>
       </div>
     </div>
@@ -69,23 +72,25 @@
     </article>
 </main>
 
-<aside class="read-next">
+<aside class="read-next container-fluid text-center">
+  <div class="row">
     {{#next_post}}
-    <a class="read-next-story {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
-        <section class="post">
+    <a class="read-next-story col-xs-12 col-md-6" {{#if image}} style="background-image:  linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)), url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
+        <section >
             <h2>{{title}}</h2>
             <p>{{excerpt words="19"}}&hellip;</p>
         </section>
     </a>
     {{/next_post}}
     {{#prev_post}}
-    <a class="read-next-story prev {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
-        <section class="post">
+    <a class="read-next-story col-xs-12 col-md-6" {{#if image}} style="background-image:  linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)), url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
+        <section>
             <h2>{{title}}</h2>
             <p>{{excerpt words="19"}}&hellip;</p>
         </section>
     </a>
     {{/prev_post}}
+  </div>
 </aside>
 
 {{/post}}
