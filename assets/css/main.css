@@ -105,6 +105,14 @@ a.post-preview-link, a.post-preview-link:hover, a.post-preview-link:focus{
   color: #555;
 }
 
+.post-meta a{
+  color: gold !important;
+}
+
+.author{
+  padding-bottom: 10%;
+}
+
 .author-profile{
   padding: 10%;
 }
@@ -130,8 +138,11 @@ a.post-preview-link, a.post-preview-link:hover, a.post-preview-link:focus{
 }
 
 .post-content{
-  padding: 10% 5%;
-  font-size: 26px;
+  padding: 10% 0%;
+  font-size: 160%;
+  word-wrap: break-word;
+  color: rgb(87, 99, 102);
+  line-height: 1.5em;
 }
 
 .post-content img{
@@ -152,7 +163,9 @@ a.post-preview-link, a.post-preview-link:hover, a.post-preview-link:focus{
 
 }
 @media(min-width:62em){
-
+  .post-content{
+    padding: 10% 15%;
+  }
 }
 
 @media(min-width:75em){
