@@ -151,6 +151,10 @@ a.post-preview-link, a.post-preview-link:hover, a.post-preview-link:focus{
   padding: 10%;
 }
 
+.no-cover{
+  background-image:  linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('http://gdriv.es/ghost-static/no-cover/index.jpg')
+}
+
 @media(min-width:34em){
 
 }
