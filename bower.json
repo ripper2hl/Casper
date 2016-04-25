@@ -1,0 +1,26 @@
+{
+  "name": "Perales",
+  "description": "theme for ghost",
+  "main": "package.json",
+  "authors": [
+    "Jesús Perales <jesus.peralesmr@uanl.edu.mx>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "ghost",
+    "theme",
+    "blog"
+  ],
+  "homepage": "https://github.com/ripper2hl/Casper",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "particles.js": "^2.0.0"
+  }
+}
